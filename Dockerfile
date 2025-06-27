@@ -20,7 +20,7 @@ RUN python manage.py migrate
 RUN python manage.py collectstatic --noinput
 
 # Expose any port (Railway injects $PORT)
-EXPOSE 8000
+EXPOSE 8080
 
 # Start Gunicorn using the dynamic Railway port
 CMD ["gunicorn", "myProject.wsgi:application", "--bind", "0.0.0.0:8080"]
