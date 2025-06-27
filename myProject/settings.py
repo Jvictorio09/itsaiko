@@ -17,10 +17,11 @@ ALLOWED_HOSTS = [
                     'itsaiko-production.up.railway.app',
                     '0.0.0.0',
                     '127.0.0.1',
-                    'localhost',
+                    'localhost'
                 ]
 
 
+CSRF_TRUSTED_ORIGINS = ['https://itsaiko-production.up.railway.app']
 # Application definition
 
 INSTALLED_APPS = [
