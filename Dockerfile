@@ -23,4 +23,5 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 8000
 
 # Start Gunicorn using the dynamic Railway port
-CMD exec gunicorn myProject.wsgi:application --bind 0.0.0.0:$PORT
+CMD ["sh", "-c", "exec gunicorn myProject.wsgi:application --bind 0.0.0.0:$PORT"]
+
